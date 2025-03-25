@@ -1,0 +1,271 @@
+[
+  {
+    "OrganizationId": "org1",
+    "OrganizationConfigType": "ORGANIZATION_CONFIG",
+    "Name": "Acme Sports",
+    "TeamName": "Acme Rockets",
+    "Slug": "acme-rockets",
+    "ShortName": "Rockets",
+    "LogoUrl": "https://example.com/logo.png",
+    "FanWebRootUrl": "https://rockets.example.com",
+    "BrandColor": "#FF5733",
+    "ExternalProviderId": "acme123",
+    "SocialLink": "https://twitter.com/acmerockets",
+    "DonateLink": "https://donate.acmerockets.com",
+    "BuyTabs": [
+      {
+        "Label": "Season Tickets",
+        "Slug": "season",
+        "Type": "season"
+      },
+      {
+        "Label": "Single Game",
+        "Slug": "single",
+        "Type": "single",
+        "GenreCode": "BASK"
+      }
+    ],
+    "Profile": [
+      {
+        "FieldName": "EMAIL",
+        "IsEditable": true,
+        "IsSSOUserEditable": false,
+        "IsRequired": true
+      },
+      {
+        "FieldName": "FIRST_NAME",
+        "IsEditable": true,
+        "IsSSOUserEditable": true,
+        "IsRequired": true
+      },
+      {
+        "FieldName": "LAST_NAME",
+        "IsEditable": true,
+        "IsSSOUserEditable": true,
+        "IsRequired": true
+      }
+    ],
+    "CustomerServiceConfig": {
+      "CustomerServicePhone": "555-123-4567"
+    },
+    "__createdAt": "2023-01-01T00:00:00Z",
+    "__updatedAt": "2023-01-01T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org1",
+    "OrganizationConfigType": "CLIENT_CONFIG",
+    "PublicAmplitudeExperimentsKey": "amplitude-key-123",
+    "PublicSegmentWriteKey": "segment-key-456",
+    "Braze": {
+      "PublicKey": "braze-key-789",
+      "BaseUrl": "https://sdk.braze.com/api/v3"
+    },
+    "OrganizationCourtCash": {
+      "Label": "Rocket Cash",
+      "Enabled": true
+    },
+    "PrivacyPolicyLink": "https://rockets.example.com/privacy",
+    "TermsLink": "https://rockets.example.com/terms",
+    "__createdAt": "2023-01-01T00:00:00Z",
+    "__updatedAt": "2023-01-01T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org1",
+    "OrganizationConfigType": "CLIENT_CONFIG_IOS",
+    "IosStoreLink": "https://apps.apple.com/us/app/acme-rockets/id123456789",
+    "__createdAt": "2023-01-01T00:00:00Z",
+    "__updatedAt": "2023-01-01T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org1",
+    "OrganizationConfigType": "CLIENT_CONFIG_ANDROID",
+    "AndroidStoreLink": "https://play.google.com/store/apps/details?id=com.acme.rockets",
+    "__createdAt": "2023-01-01T00:00:00Z",
+    "__updatedAt": "2023-01-01T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org2",
+    "OrganizationConfigType": "ORGANIZATION_CONFIG",
+    "Name": "Rockets Basketball",
+    "TeamName": "Rockets",
+    "Slug": "rockets-basketball",
+    "ShortName": "RKT",
+    "LogoUrl": "https://example.com/rockets-logo.png",
+    "FanWebRootUrl": "https://rockets-basketball.example.com",
+    "BrandColor": "#FF0000",
+    "ExternalProviderId": "rockets456",
+    "SocialLink": "https://twitter.com/rocketsbasketball",
+    "DonateLink": "https://donate.rocketsbasketball.com",
+    "BuyTabs": [
+      {
+        "Label": "Season Tickets",
+        "Slug": "season",
+        "Type": "season"
+      },
+      {
+        "Label": "Group Tickets",
+        "Slug": "group",
+        "Type": "group"
+      }
+    ],
+    "Profile": [
+      {
+        "FieldName": "EMAIL",
+        "IsEditable": true,
+        "IsSSOUserEditable": false,
+        "IsRequired": true
+      },
+      {
+        "FieldName": "FIRST_NAME",
+        "IsEditable": true,
+        "IsSSOUserEditable": true,
+        "IsRequired": true
+      },
+      {
+        "FieldName": "PHONE_NUMBER",
+        "IsEditable": true,
+        "IsSSOUserEditable": true,
+        "IsRequired": false
+      }
+    ],
+    "CustomerServiceConfig": {
+      "CustomerServicePhone": "555-987-6543"
+    },
+    "__createdAt": "2023-01-02T00:00:00Z",
+    "__updatedAt": "2023-01-02T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org2",
+    "OrganizationConfigType": "CLIENT_CONFIG",
+    "PublicAmplitudeExperimentsKey": "amplitude-key-rockets",
+    "PublicSegmentWriteKey": "segment-key-rockets",
+    "Braze": {
+      "PublicKey": "braze-key-rockets",
+      "BaseUrl": "https://sdk.braze.com/api/v3"
+    },
+    "OrganizationCourtCash": {
+      "Label": "Court Cash",
+      "Enabled": true
+    },
+    "PrivacyPolicyLink": "https://rockets-basketball.example.com/privacy",
+    "TermsLink": "https://rockets-basketball.example.com/terms",
+    "__createdAt": "2023-01-02T00:00:00Z",
+    "__updatedAt": "2023-01-02T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org2",
+    "OrganizationConfigType": "CLIENT_CONFIG_IOS",
+    "IosStoreLink": "https://apps.apple.com/us/app/rockets-basketball/id987654321",
+    "__createdAt": "2023-01-02T00:00:00Z",
+    "__updatedAt": "2023-01-02T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org2",
+    "OrganizationConfigType": "CLIENT_CONFIG_ANDROID",
+    "AndroidStoreLink": "https://play.google.com/store/apps/details?id=com.rockets.basketball",
+    "__createdAt": "2023-01-02T00:00:00Z",
+    "__updatedAt": "2023-01-02T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org3",
+    "OrganizationConfigType": "ORGANIZATION_CONFIG",
+    "Name": "Tigers Football",
+    "TeamName": "Tigers",
+    "Slug": "tigers-football",
+    "ShortName": "TGR",
+    "LogoUrl": "https://example.com/tigers-logo.png",
+    "FanWebRootUrl": "https://tigers.example.com",
+    "BrandColor": "#FFA500",
+    "ExternalProviderId": "tigers789",
+    "SocialLink": "https://twitter.com/tigersfootball",
+    "DonateLink": "https://donate.tigersfootball.com",
+    "BuyTabs": [
+      {
+        "Label": "Season Tickets",
+        "Slug": "season",
+        "Type": "season"
+      },
+      {
+        "Label": "Single Game",
+        "Slug": "single",
+        "Type": "single",
+        "GenreCode": "FOOT"
+      }
+    ],
+    "Profile": [
+      {
+        "FieldName": "EMAIL",
+        "IsEditable": true,
+        "IsSSOUserEditable": false,
+        "IsRequired": true
+      },
+      {
+        "FieldName": "FIRST_NAME",
+        "IsEditable": true,
+        "IsSSOUserEditable": true,
+        "IsRequired": true
+      },
+      {
+        "FieldName": "LAST_NAME",
+        "IsEditable": true,
+        "IsSSOUserEditable": true,
+        "IsRequired": true
+      },
+      {
+        "FieldName": "BIRTHDAY",
+        "IsEditable": true,
+        "IsSSOUserEditable": true,
+        "IsRequired": false
+      }
+    ],
+    "CustomerServiceConfig": {
+      "CustomerServicePhone": "555-789-0123"
+    },
+    "__createdAt": "2023-01-03T00:00:00Z",
+    "__updatedAt": "2023-01-03T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org3",
+    "OrganizationConfigType": "CLIENT_CONFIG",
+    "PublicAmplitudeExperimentsKey": "amplitude-key-tigers",
+    "PublicSegmentWriteKey": "segment-key-tigers",
+    "Braze": {
+      "PublicKey": "braze-key-tigers",
+      "BaseUrl": "https://sdk.braze.com/api/v3"
+    },
+    "OrganizationCourtCash": {
+      "Label": "Tiger Cash",
+      "Enabled": true
+    },
+    "PrivacyPolicyLink": "https://tigers.example.com/privacy",
+    "TermsLink": "https://tigers.example.com/terms",
+    "__createdAt": "2023-01-03T00:00:00Z",
+    "__updatedAt": "2023-01-03T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org3",
+    "OrganizationConfigType": "CLIENT_CONFIG_IOS",
+    "IosStoreLink": "https://apps.apple.com/us/app/tigers-football/id135792468",
+    "__createdAt": "2023-01-03T00:00:00Z",
+    "__updatedAt": "2023-01-03T00:00:00Z",
+    "__updatedBy": "system"
+  },
+  {
+    "OrganizationId": "org3",
+    "OrganizationConfigType": "CLIENT_CONFIG_ANDROID",
+    "AndroidStoreLink": "https://play.google.com/store/apps/details?id=com.tigers.football",
+    "__createdAt": "2023-01-03T00:00:00Z",
+    "__updatedAt": "2023-01-03T00:00:00Z",
+    "__updatedBy": "system"
+  }
+]
