@@ -1,0 +1,97 @@
+name: Deploy to Development
+
+on:
+  push:
+    branches:
+      - development
+    paths:
+      - src/**
+      - package.json
+      - package-lock.json
+      - yarn.lock
+      - infrastructure/**
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          
+      - name: Install backend dependencies
+        working-directory: src/backend
+        run: npm ci
+        
+      - name: Build backend
+        working-directory: src/backend
+        run: npm run build
+        
+      - name: Install frontend dependencies
+        working-directory: src/web
+        run: npm ci
+        
+      - name: Build frontend
+        working-directory: src/web
+        run: npm run build
+        env:
+          ORGANIZATION_CONFIGURATION_TABLE_NAME: ${{ secrets.ORGANIZATION_CONFIGURATION_TABLE_NAME }}
+          NEXT_PUBLIC_API_BASE_URL: '/api'
+          
+      - name: Install CDK dependencies
+        working-directory: infrastructure/cdk
+        run: npm ci
+        
+      - name: Deploy to AWS Amplify
+        working-directory: infrastructure/cdk
+        run: npm run cdk deploy AmplifyDevStack -- --require-approval never
+        env:
+          ENVIRONMENT: development
+          ORGANIZATION_CONFIGURATION_TABLE_NAME: ${{ secrets.ORGANIZATION_CONFIGURATION_TABLE_NAME }}
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+          
+      - name: Run unit tests
+        run: npm run test
+        working-directory: src/web
+        env:
+          DEV_URL: ${{ secrets.DEV_APP_URL }}
+          
+      - name: Verify deployment
+        run: "curl -s -o /dev/null -w '%{http_code}' ${{ secrets.DEV_APP_URL }}/api/health | grep 200 || exit 1"
+          
+      - name: Notify deployment status
+        if: always()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { job, conclusion } = context.payload;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `Deployment to development environment ${conclusion === 'success' ? 'succeeded' : 'failed'}. [View deployment](${process.env.DEV_APP_URL})`
+            })
+        env:
+          DEV_APP_URL: ${{ secrets.DEV_APP_URL }}
+          
+      - name: Rollback on failure
+        if: failure()
+        working-directory: infrastructure/cdk
+        run: npm run cdk rollback AmplifyDevStack
+        env:
+          ENVIRONMENT: development
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
