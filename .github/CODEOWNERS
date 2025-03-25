@@ -1,0 +1,38 @@
+# Default owners for everything in the repo
+* @admin-team
+
+# Backend code ownership
+/src/backend/ @backend-team
+/src/web/app/api/ @backend-team
+
+# Frontend code ownership
+/src/web/ @frontend-team
+
+# Infrastructure code ownership
+/infrastructure/ @devops-team
+
+# Documentation ownership
+/docs/ @docs-team @admin-team
+
+# GitHub workflows and configuration
+/.github/ @devops-team
+
+# Specific component ownership
+/src/backend/data/ @data-team @backend-team
+/src/backend/services/ @backend-team
+/src/backend/validation/ @backend-team
+/src/web/components/ @frontend-team
+/src/web/hooks/ @frontend-team
+
+# Test files
+/src/backend/__tests__/ @backend-team @qa-team
+/src/web/__tests__/ @frontend-team @qa-team
+
+# Configuration files
+*.json @admin-team @devops-team
+*.yml @admin-team @devops-team
+*.config.* @admin-team @devops-team
+
+# Security-sensitive files
+/src/backend/middleware/auth.ts @security-team @backend-team
+/infrastructure/cdk/lib/iam-stack.ts @security-team @devops-team
