@@ -1,0 +1,32 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+
+# Infrastructure
+infrastructure/cdk/cdk.out/
+infrastructure/cdk/node_modules/
+
+# Generated files
+**/*.generated.*
+**/*.d.ts
+
+# Test fixtures and mocks
+**/__fixtures__/**
+**/__mocks__/**
+
+# Configuration files
+*.config.js
+next.config.js
+postcss.config.js
+tailwind.config.ts
+jest.config.ts
+
+# Public assets
+public/
+
+# Documentation
+docs/
+*.md
