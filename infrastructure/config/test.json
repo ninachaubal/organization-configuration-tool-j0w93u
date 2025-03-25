@@ -1,0 +1,24 @@
+{
+  "aws": {
+    "account": "555666777888",
+    "region": "us-east-1"
+  },
+  "app": {
+    "name": "org-config-tool-test",
+    "domainName": "test-config.internal-tools.example.com",
+    "certificateArn": "arn:aws:acm:us-east-1:555666777888:certificate/5678abcd-1234-90ef-ghij-klmnopqrstuv"
+  },
+  "dynamodb": {
+    "tableName": "OrganizationConfiguration-Test"
+  },
+  "monitoring": {
+    "alarmEmail": "test-alerts@example.com",
+    "dashboardName": "OrgConfigTool-Test-Dashboard"
+  },
+  "tags": {
+    "Environment": "Testing",
+    "Project": "OrganizationConfigTool",
+    "CostCenter": "InternalTools",
+    "ManagedBy": "CDK"
+  }
+}
