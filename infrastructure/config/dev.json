@@ -1,0 +1,24 @@
+{
+  "aws": {
+    "account": "111222333444",
+    "region": "us-east-1"
+  },
+  "app": {
+    "name": "org-config-tool-dev",
+    "domainName": "dev-config.internal-tools.example.com",
+    "certificateArn": "arn:aws:acm:us-east-1:111222333444:certificate/1234abcd-5678-90ef-ghij-klmnopqrstuv"
+  },
+  "dynamodb": {
+    "tableName": "OrganizationConfiguration-Dev"
+  },
+  "monitoring": {
+    "alarmEmail": "dev-alerts@example.com",
+    "dashboardName": "OrgConfigTool-Dev-Dashboard"
+  },
+  "tags": {
+    "Environment": "Development",
+    "Project": "OrganizationConfigTool",
+    "CostCenter": "InternalTools",
+    "ManagedBy": "CDK"
+  }
+}
