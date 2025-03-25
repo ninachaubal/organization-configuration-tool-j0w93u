@@ -1,0 +1,14 @@
+[
+  {
+    "OrganizationId": "org1",
+    "Name": "Acme Sports"
+  },
+  {
+    "OrganizationId": "org2",
+    "Name": "Rockets Basketball"
+  },
+  {
+    "OrganizationId": "org3",
+    "Name": "Tigers Football"
+  }
+]
