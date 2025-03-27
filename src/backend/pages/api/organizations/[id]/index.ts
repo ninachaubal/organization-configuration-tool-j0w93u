@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'; // ^14.0.0
-import { OrganizationService } from '../../../services/OrganizationService';
-import { withErrorHandling } from '../../../middleware/error';
-import { AppError, AppErrorCode, HttpStatusCode } from '../../../types/error';
-import { Organization } from '../../../models/Organization';
-import { OrganizationIdParam } from '../../../types/request';
+import { OrganizationService } from '../../../../services/OrganizationService';
+import { withErrorHandling } from '../../../../middleware/error';
+import { AppError, AppErrorCode, HttpStatusCode } from '../../../../types/error';
+import { Organization } from '../../../../models/Organization';
+import { OrganizationIdParam } from '../../../../types/request';
 
 /**
  * Handles GET requests to retrieve a specific organization by ID

@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'; // ^14.0.0
-import { ConfigurationService } from '../../../../services/ConfigurationService';
-import { AppError, AppErrorCode, HttpStatusCode } from '../../../../types/error';
-import { GetOrganizationConfigResponse } from '../../../../types/response';
-import { withErrorHandling } from '../../../../middleware/error';
+import { ConfigurationService } from '../../../../../services/ConfigurationService';
+import { AppError, AppErrorCode, HttpStatusCode } from '../../../../../types/error';
+import { GetOrganizationConfigResponse } from '../../../../../types/response';
+import { withErrorHandling } from '../../../../../middleware/error';
 
 /**
  * API route handler for retrieving all configuration records for a specific organization

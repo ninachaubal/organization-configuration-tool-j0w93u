@@ -1,17 +1,17 @@
 import { NextApiRequest, NextApiResponse } from 'next'; // ^14.0.0
-import { OrganizationService } from '../../services';
+import { OrganizationService } from '../../../services';
 import { 
   GetOrganizationsRequest, 
   CreateOrganizationRequest 
-} from '../../types/request';
+} from '../../../types/request';
 import { 
   GetOrganizationsResponse,
   CreateOrganizationResponse 
-} from '../../types/response';
-import { Organization } from '../../models/Organization';
-import { handleApiError } from '../../utils/error-handling';
-import { withValidation } from '../../middleware/validation';
-import { organizationSchema } from '../../validation/schemas/organization';
+} from '../../../types/response';
+import { Organization } from '../../../models/Organization';
+import { handleApiError } from '../../../utils/error-handling';
+import { withValidation } from '../../../middleware/validation';
+import { organizationSchema } from '../../../validation/schemas/organization';
 
 /**
  * Handler for GET requests to list all organizations

@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'; // ^14.0.0
 import { checkDatabaseConnection } from './db';
-import { withErrorHandling } from '../../middleware/error';
-import { withLogging } from '../../middleware/logging';
-import { info } from '../../utils/logging';
-import { HttpStatusCode } from '../../types/error';
+import { withErrorHandling } from '../../../middleware/error';
+import { withLogging } from '../../../middleware/logging';
+import { info } from '../../../utils/logging';
+import { HttpStatusCode } from '../../../types/error';
 
 /**
  * API route handler for the main health check endpoint

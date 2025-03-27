@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'; // ^14.0.0
-import { OrganizationConfiguration } from '../../data/entities/OrganizationConfiguration';
-import { createDatabaseError } from '../../utils/error-handling';
-import { info, error as logError } from '../../utils/logging';
-import { withErrorHandling } from '../../middleware/error';
-import { withLogging } from '../../middleware/logging';
+import { OrganizationConfiguration } from '../../../data/entities/OrganizationConfiguration';
+import { createDatabaseError } from '../../../utils/error-handling';
+import { info, error as logError } from '../../../utils/logging';
+import { withErrorHandling } from '../../../middleware/error';
+import { withLogging } from '../../../middleware/logging';
 
 /**
  * Verifies connectivity to DynamoDB by performing a lightweight scan operation

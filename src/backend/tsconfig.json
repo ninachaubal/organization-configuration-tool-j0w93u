@@ -1,46 +1,42 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "es2018",                    /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
-    "lib": ["es2018", "esnext.asynciterable"], /* Specify library files to be included in the compilation. */
-    "allowJs": true,                       /* Allow javascript files to be compiled. */
-    "skipLibCheck": true,                  /* Skip type checking of declaration files. */
-    "outDir": "dist",                      /* Redirect output structure to the directory. */
-    "declaration": true,                   /* Generates corresponding '.d.ts' file. */
-    "sourceMap": true,                     /* Generates corresponding '.map' file. */
-    
-    /* Strict Type-Checking Options */
-    "strict": true,                        /* Enable all strict type-checking options. */
-    
-    /* Module Resolution Options */
-    "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
-    "baseUrl": ".",                        /* Base directory to resolve non-absolute module names. */
-    "paths": {                             /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
-      "@/*": ["./*"]
+    "target": "es2018", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "lib": [
+      "es2018",
+      "esnext.asynciterable"
+    ], /* Specify library files to be included in the compilation. */
+    "allowJs": true, /* Allow javascript files to be compiled. */
+    "skipLibCheck": true, /* Skip type checking of declaration files. */
+    "outDir": "dist", /* Redirect output structure to the directory. */
+    "declaration": true, /* Generates corresponding '.d.ts' file. */
+    "sourceMap": true, /* Generates corresponding '.map' file. *//* Strict Type-Checking Options */
+    "strict": true, /* Enable all strict type-checking options. *//* Module Resolution Options */
+    "moduleResolution": "node", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "baseUrl": ".", /* Base directory to resolve non-absolute module names. */
+    "paths": { /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+      "@/*": [
+        "./*"
+      ]
     },
-    "esModuleInterop": true,               /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. */
-    "resolveJsonModule": true,             /* Include modules imported with '.json' extension. */
-    
-    /* Additional Checks */
-    "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
-    
-    /* Advanced Options */
-    "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
-    "incremental": true,                   /* Enable incremental compilation by reading/writing information from prior compilations to a file. */
-    
-    /* Module Options */
-    "module": "commonjs",                  /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
-    "noEmit": false                        /* Do not emit outputs. */
+    "esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. */
+    "resolveJsonModule": true, /* Include modules imported with '.json' extension. *//* Additional Checks */
+    "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. *//* Advanced Options */
+    "isolatedModules": true, /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    "incremental": true, /* Enable incremental compilation by reading/writing information from prior compilations to a file. *//* Module Options */
+    "module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    "noEmit": false /* Do not emit outputs. */,
+    "jsx": "preserve"
   },
   "include": [
-    "**/*.ts",                             /* Include all TypeScript files */
-    "**/*.tsx"                             /* Include all TypeScript React files */
+    "**/*.ts", /* Include all TypeScript files */
+    "**/*.tsx" /* Include all TypeScript React files */
   ],
   "exclude": [
-    "node_modules",                        /* Exclude node_modules directory */
-    "dist",                                /* Exclude compiled output directory */
-    "**/*.test.ts",                        /* Exclude test files */
-    "**/*.spec.ts",                        /* Exclude spec files */
-    "jest.config.ts"                       /* Exclude Jest configuration */
+    "node_modules", /* Exclude node_modules directory */
+    "dist", /* Exclude compiled output directory */
+    "**/*.test.ts", /* Exclude test files */
+    "**/*.spec.ts", /* Exclude spec files */
+    "jest.config.ts" /* Exclude Jest configuration */
   ]
 }
